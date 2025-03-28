@@ -1,3 +1,74 @@
-body {
+/* stylelint-disable at-rule-empty-line-before */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* display: flex; */
+  font-family: Roboto, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+  margin: 0;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  height: 60px;
+  width: 100%;
+}
+
+li {
+  margin: 20px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 60px;
+  list-style: none;
+  white-space: nowrap;
+}
+
+nav a {
+  font-size: 12px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 22px;
+  padding-top: 22px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #00acdc;
+  border-radius: 8px;
+  transition: width 0.3s ease;
+}
+
+nav a.is-active::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #00acdc;
+}
+
+nav a.active {
+  color: #00acdc;
 }
